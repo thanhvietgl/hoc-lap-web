@@ -1,0 +1,90 @@
+-display: block (taọ khối cho những thuộc tính xuống dòng)
+-display: inline (ngược lại của block,)
+-khi sử dụng float:left thì phải dùng overflow:hiden cho khối mẹ để tránh lỗi 
+-icon/ background: transparent (trong suốt)
+
+-layer: yêu cầu khối con phải nằm trong khối cha (position: relative (cha)
+							absolute(con))
+	- khi khối nhiều layer thì thuộc tính nào có trước thì nằm dưới/html
+	- hoặc xét z-index/css cho phần tử con để sắp xếp thức tự
+
+-flexbox: display: flex:
+	
+	flex-direction:
+	- row: theo hàng
+	- row-reverse: theo hàng ngược lại
+	- column, theo cột (từ trên xuống)
+	- column -reverse
+
+	flex-wrap:( xuống dòng hay không)
+	- nonwrap: không xuống dòng
+	- wrap: xuống dòng
+
+	justify-content: căn chỉnh theo chiều ngang của các khối bên trong
+	- center: căn chỉnh nội dung ở trung tâm
+	- flex-start(dồn sang trái)
+	- flex-end (dồn sang phải)
+	- space - between( chia đều trong khối)
+	- space - around( chia đều các khối và hai lề của khối
+
+	align-item: canh chỉnh theo chiều dọc( khối có chiều cao cố đinh)
+	- stretch: tự lấp đầy chiều cao
+	- flex-start: dồn lên trên
+	- flex-end: dồn xuống dưới
+	- base-line: chỉ canh chữ cho thẳng hàng.
+	- center: canh giữa theo chiều dọc
+
+
+- Thuộc tính:
+	- bolder-radius: bo góc
+
+
+- background attachment: lấy ảnh làm background - nhưng khi lướt chuột đi thì ảnh đứng yên
+- backgournd size: cover (hình làm backround k bị lệch)
+- transform:scale(1) :zoom lên 
+- box-sizing: border-box (khi xài padding thì kích thước được giữ nguyên)
+
+-animation:
+	+khai báo
+	@-webkit-keyframes tên-animation{
+		from{trạng thái ban đầu}
+		To{Trạng thái sau}
+	}
+	
+	+áp dụng:
+		Animation:tên-animation {space} thời gian {space} hướng chạy
+		Animation-delay:thời gian hoãn animation
+
+
+-responsive:giao diện tùy biến theo hành vi người dùng	
+	+ để dùng được responsive:
+thẻ <head> thêm <meta name= "viewport" content= "width=device-width, initial-scale=1.0">
+	+Khai báo:
+	@media screen and (max-width:2000px){
+		.khoi img{
+			width:500px;
+			height:auto;
+		}
+	}
+	@media screen and (max-width:480px){
+		.khoi img{
+			width:500px;
+			height:auto;
+		}
+	}
+
+
+-bootstrap:
+	-collapse: ẩn/hiện nội dung
+	+ data-toggle="collapse" data-target="#id"
+-dropdown:
+	-để chạy được dropdown, phỉa có thư viện popper.min.js đặt giữa jquery và bootstrap
+-modal: kiểm tra người dùng có bấm nhầm hay không
+ 
+
+-animation: jquery
+	+transform: translateX/Y/Z(px) rorateX/Y/Z(deg) 
+	(vị trí trên màn hình theo 3 chiều, xoay theo 3 chiều)
+	+ muốn có hiệu ứng 3D chiều sâu thì DIV phải có thuộc tính:Perspective:px 
+	(tạo chiều sâu 3D)
+	
